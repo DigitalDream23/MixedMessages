@@ -1,3 +1,6 @@
+// These four arrays can be combined in any which way to get a predicction for the week and more can easly be added to
+// any of the categories.
+
 const intro = ['Your moon in Scorpio ', 'Your sun in Taurus ', 
 'Your ascendant in Gemini ', 'The new cycle of the moon ', 
 'Your seventh house in Leo ', 'Mercury retrograde ', ];
@@ -21,11 +24,13 @@ const final = [ ' and dont forget that there are always those who you can reach 
 ' and be grateful for what you DO have as things could always be much worse.', 
 ' and make and effort to help others as much as you can for life will always return it tenfold.'];
 
+// Created a single function that returns a item from an array at random.
 const randomArray = (array)=>{
     let randomIndex = Math.floor(Math.random()* array.length);
     return array[randomIndex];
 }
 
+// Combines all four array categories into one coherent prediction for the user
 let mixedMessage = `The message of the stars for you during this week is: ${randomArray(intro)}${randomArray(secondSection)}${randomArray(thirdSection)}${randomArray(final)}`;
 
 console.log(mixedMessage);
